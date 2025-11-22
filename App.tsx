@@ -1,10 +1,10 @@
 
 import React from 'react';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import About from './components/About';
-import Services from './components/Services';
-import Contact from './components/Contact';
+import Header from './src/components/Header';
+import Hero from './src/components/Hero';
+import About from './src/components/About';
+import Services from './src/components/Services';
+import Contact from './src/components/Contact';
 
 function App() {
   return (

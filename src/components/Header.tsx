@@ -1,11 +1,13 @@
-
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Flower } from 'lucide-react';
+import logo from "../assets/logo.png";
+
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [imageError, setImageError] = useState(false);
+  const [showNotice, setShowNotice] = useState(true); //for notice banner
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,11 +26,34 @@ const Header: React.FC = () => {
 
   return (
     <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled ? 'bg-primary-950/95 backdrop-blur-md shadow-2xl py-3 border-b border-primary-800/50' : 'bg-transparent py-8'
+    //   className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+    //     isScrolled ? 'bg-primary-950/95 backdrop-blur-md shadow-2xl py-3 border-b border-primary-800/50' : 'bg-transparent py-8'
+    //   }`}
+    // >
+    //   <div className="container mx-auto px-4 md:px-8 flex items-center justify-between">
+    className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 flex flex-col ${
+        isScrolled ? 'bg-primary-950/95 backdrop-blur-md shadow-2xl border-b border-primary-800/50' : 'bg-transparent'
       }`}
     >
-      <div className="container mx-auto px-4 md:px-8 flex items-center justify-between">
+      {/* Holiday Notice Banner */}
+      {showNotice && (
+        <div className="bg-gradient-to-r from-gold-700 to-gold-500 text-white text-xs md:text-sm py-2 px-8 text-center relative w-full z-50">
+          <p className="font-medium tracking-wide">
+            🎄 <span className="font-bold">Kerstsluiting:</span> Wij zijn gesloten op 25.26 en 27 december 2025. Fijne feestdagen!
+          </p>
+          <button 
+            onClick={() => setShowNotice(false)} 
+            className="absolute right-2 top-1/2 -translate-y-1/2 p-1 hover:bg-gold-800/20 rounded-full transition-colors"
+            aria-label="Sluit melding"
+          >
+            <X size={16} />
+          </button>
+        </div>
+      )}
+
+      <div className={`container mx-auto px-4 md:px-8 flex items-center justify-between transition-all duration-500 ${isScrolled ? 'py-3' : 'py-6'}`}>
+
+
         {/* Logo */}
         <a href="#" className="flex items-center gap-4 group">
           <div className="w-12 h-12 relative">
@@ -38,7 +63,7 @@ const Header: React.FC = () => {
                  <Flower className="w-3/4 h-3/4 text-gold-400" strokeWidth={1.5} />
                ) : (
                  <img 
-                   src="logo.png" 
+                   src={logo} 
                    alt="YIKANG Logo" 
                    className="w-full h-full object-contain rounded-full"
                    onError={() => setImageError(true)}

@@ -2,8 +2,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { MessageCircle, X, Send, Sparkles, Loader2 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { sendMessageToGemini } from '../services/geminiService';
-import { ChatMessage } from '../types';
+import { sendMessageToGemini } from '../../services/geminiService';
+import { ChatMessage } from '../../types';
 
 const ChatWidget: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);

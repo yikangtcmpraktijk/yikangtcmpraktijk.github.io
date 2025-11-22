@@ -57,7 +57,6 @@ const Contact: React.FC = () => {
                 </div>
                 <h3 className="font-serif text-xl font-bold text-primary-50 mb-4">E-mail</h3>
                 <p className="text-primary-300 mb-6 leading-relaxed">
-                  Voor afspraken en vragen.
                 </p>
                 <a href="mailto:info@yikangtcmpraktijk.com" className="text-gold-400 font-medium hover:text-gold-300 underline break-all transition-colors">
                   info@yikangtcmpraktijk.com

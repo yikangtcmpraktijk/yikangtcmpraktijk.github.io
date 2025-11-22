@@ -12,7 +12,7 @@ const Services: React.FC = () => {
     {
       id: 'acupuncture' as ServiceId,
       title: 'Acupunctuur',
-      description: "Stimuleer het zelfgenezend vermogen van uw lichaam met fijne steriele naalden. Effectief bij pijnklachten, stress en hormonale balans.",
+      description: "Acupunctuur is een behandelvorm binnen de Traditionele Chinese Geneeskunde waarbij zeer dunne naaldjes op specifieke punten in het lichaam worden geplaatst. Deze techniek ondersteunt de doorstroming van energie, bevordert het natuurlijke herstelvermogen en helpt bij het verminderen van pijn en diverse lichamelijke en emotionele klachten. Acupunctuur is een veilige, effectieve en breed inzetbare therapie voor zowel acute als chronische gezondheidsproblemen.",
       image: 'https://images.unsplash.com/photo-1616341333499-37f39b4513a6?auto=format&fit=crop&q=80&w=800',
       priceFrom: '€30',
       features: ['Intake & Diagnose', 'Klassieke Acupunctuur', 'Ooracupunctuur', 'Combinaties']
@@ -20,15 +20,15 @@ const Services: React.FC = () => {
     {
       id: 'tuina' as ServiceId,
       title: 'Tui-Na Therapie',
-      description: 'Chinese therapeutische massage gericht op meridiaanpunten en spieren om spanning te verlichten en energiestroom te verbeteren.',
+      description: 'Tui Na is een therapeutische massagevorm binnen de Traditionele Chinese Geneeskunde. Door gerichte technieken zoals drukken, kneden en strijken worden blokkades verminderd, de doorbloeding verbeterd en het lichaam in balans gebracht. Tui Na-therapie wordt toegepast bij onder meer pijnklachten, spanning, bewegingsbeperkingen en problemen in de energiedoorstroming. Het is een effectieve methode om zowel fysieke als energetische klachten te behandelen.',
       image: 'https://images.unsplash.com/photo-1519823551278-64ac927ac2fb?auto=format&fit=crop&q=80&w=800',
       priceFrom: '€40',
       features: ['Meridiaanmassage', 'Spierontspanning', '30-90 Minuten Sessies']
     },
     {
       id: 'reflexology' as ServiceId,
-      title: 'Reflexologie & Detox',
-      description: 'Gespecialiseerde behandelingen inclusief Voetreflexologie, Cupping en Gua-Sha om circulatie te bevorderen en te ontgiften.',
+      title: 'Chinese Voetreflex',
+      description: 'Het is een natuurlijke therapie die ervan uitgaat dat zones op de voet verbonden zijn met organen en systemen in het lichaam. Door druk uit te oefenen op deze reflexzones en op belangrijke acupunctuurpunten op de voeten, probeert men de energie-stroom (qi) te harmoniseren en de bloedcirculatie te verbeteren.',
       image: 'https://images.unsplash.com/photo-1590156424570-698d124ec7dd?auto=format&fit=crop&q=80&w=800',
       priceFrom: '€35',
       features: ['Voetreflexologie', 'Cupping Therapie', 'Gua-Sha Therapie']
@@ -40,11 +40,12 @@ const Services: React.FC = () => {
       title: 'Acupunctuur Tarieven',
       subtitle: 'Effectief voor pijn, stress en interne balans.',
       items: [
-        { name: 'Intakegesprek', price: '€30.00', note: 'Verplicht bij eerste bezoek' },
+        { name: 'Intakegesprek', price: '€30.00', note: 'Diagnose en behandelplan' },
         { name: 'Klassieke Acupunctuur', price: '€65.00', note: 'Per behandeling' },
         { name: 'Ooracupunctuur', price: '€40.00', note: 'Per behandeling' },
         { name: 'Acupunctuur met Cupping/Gua-Sha', price: '€75.00', note: 'Gecombineerde behandeling' },
-        { name: 'Verblijfsnaalden', price: '€30.00', note: 'Per behandeling' }
+        { name: 'Verblijfsnaalden', price: '€30.00', note: 'Per behandeling' },
+        { name: 'Cupping/Gua-Sha', price: '€35.00', note: 'Per behandeling' }
       ]
     },
     tuina: {
@@ -57,12 +58,10 @@ const Services: React.FC = () => {
       ]
     },
     reflexology: {
-      title: 'Gespecialiseerde Therapieën',
+      title: 'Chinese Voetreflex',
       subtitle: 'Detoxificatie en ontspanningsbehandelingen.',
       items: [
-        { name: 'Chinese Voetreflex (55 min)', price: '€65.00', note: 'Reflexologie' },
-        { name: 'Cupping Therapie', price: '€35.00', note: 'Per behandeling' },
-        { name: 'Gua-Sha Therapie', price: '€35.00', note: 'Per behandeling' }
+        { name: 'Chinese Voetreflex (55 min)', price: '€65.00', note: 'Reflexologie' }
       ]
     }
   };
